@@ -1,6 +1,21 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<script type="text/javascript">
+		$.ajax({
+			url: 'check_user.php',
+			method: 'POST',
+			success: function(data){
+				if (data == '0'){
+					window.location.href = "index.html"
+				}else if(data == '1'){
+					console.log("got 1");
+				}else{
+					console.log(data);
+				}
+			}
+		})
+	</script>
 	<title>Home</title>
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="css/profile_style.css">
@@ -9,7 +24,7 @@
 
 <!-- Navbar Start -->
 	<nav class="navbar navbar-expand-lg navbar-light bg-light" >
-	  <a class="navbar-brand" href="#">User Name</a>
+	  <a id="username-display" class="navbar-brand" href="#"></a>
 	  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
 	    <span class="navbar-toggler-icon"></span>
 	  </button>
@@ -23,7 +38,7 @@
 		        <a class="nav-link" href="#">Friends</a>
 		      </li>
 		      <li class="nav-item">
-		        <a class="nav-link" href="#">Logout</a>
+		        <a id="logout" class="nav-link" href="logout.php">Logout</a>
 		      </li>
 		    </ul>
 		  </div>
@@ -62,6 +77,6 @@
 	<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
 	<script type="text/javascript" src="js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="js/popper.min.js"></script>
-	
+	<script type="text/javascript" src="js/profile_js.js"></script>
 </body>
 </html>
