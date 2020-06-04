@@ -1,0 +1,27 @@
+html, body {
+    margin: 0;
+    height: 100%;
+}
+
+.outer-wrapper {
+	display: flex;
+	height: 100%;
+	justify-content: center;
+
+}
+
+
+.wrapper {
+	margin-top: 10%;
+	background-color: #edf4ff;
+	position: absolute;
+	display: inline-block;
+	border: solid 2px lightblue;
+	padding-top:3rem ;
+	padding-bottom:3rem ;
+	padding-left: 1.5rem;
+	padding-right: 1.5rem;
+	
+	border-top-left-radius:15px ;
+	border-bottom-right-radius:15px ;
+}

@@ -1,0 +1,39 @@
+
+nav {
+	margin-bottom: 1rem;
+}
+
+.updates {
+	border: solid 2px lightblue;
+
+	padding: 1rem;
+	border-top-left-radius:15px ;
+	border-bottom-right-radius:15px ;
+
+
+}
+
+.post {
+	border: solid 2px lightblue;
+	padding: 1rem;
+	border-top-left-radius:15px ;
+	border-bottom-right-radius:15px ;
+}
+
+.updates h4 {
+	border-bottom: solid 1px grey;
+	font-weight: bold;
+}
+
+.post h5 {
+	border-bottom: solid 1px grey;
+	
+}
+
+.post textarea {
+	width: 100%;
+}
+
+.post input {
+	float: right;
+}

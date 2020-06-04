@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Home</title>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/profile_style.css">
+</head>
+<body>
+
+<!-- Navbar Start -->
+	<nav class="navbar navbar-expand-lg navbar-light bg-light" >
+	  <a class="navbar-brand" href="#">User Name</a>
+	  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+	    <span class="navbar-toggler-icon"></span>
+	  </button>
+	  	
+		  <div class="collapse navbar-collapse "  id="navbarNav">
+		    <ul class="navbar-nav ml-md-auto">
+		      <li class="nav-item ">
+		        <a class="nav-link" href="#">Home </a>
+		      </li>
+		      <li class="nav-item">
+		        <a class="nav-link" href="#">Friends</a>
+		      </li>
+		      <li class="nav-item">
+		        <a class="nav-link" href="#">Logout</a>
+		      </li>
+		    </ul>
+		  </div>
+		
+
+	</nav>
+<!-- NavBar end -->
+
+	<div class="container">
+		<div class="row">
+			<div id="updates" class="col-lg-7 col-xl-7 col-md-7 col-sm-12 updates">
+				<h4>Updates</h4>
+				<div id="updates-box">
+					
+				</div>
+			</div>
+
+			<div  class="col-lg-1 col-xl-1 col-md-1 col-sm-12"><br><br></div>
+
+			<div id="posts" class="col-lg-4 col-xl-4 col-md-4 col-sm-12 post">
+				
+				<form>
+					<div class="form-group">
+						<label for="post-box"><h5>Post a new update</h5></label>
+						<textarea rows="6" id="post-box"></textarea>
+						
+					</div>
+					<input  type="submit" class="btn btn-outline-success" name="">
+				</form>
+				
+			</div>
+		</div>
+	</div>
+
+
+	<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/popper.min.js"></script>
+	
+</body>
+</html>
