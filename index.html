@@ -1,54 +1,59 @@
 <!DOCTYPE html>
 <html>
-    <head>
 
-        <title>Home</title>
-        <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-        <link rel="stylesheet" type="text/css" href="css/index_style.css">
+<head>
+    <title>Chat App</title>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/index_style.css"> </head>
 
-    </head>
-    <body>
-        <a target="_blank" href="https://github.com/atharva-bhange/chatapp"><button id="github-btn"  type="button" class="btn btn-outline-dark">Github Repository</button></a>
-        <p id="banner">Created By: <a target="_blank" href="https://www.linkedin.com/in/atharva-bhange/">Atharva Bhange</a></p>
-        <div class="container outer-wrapper">
-            <div class="wrapper">
+<body>
+
+    <a target="_blank" href="https://github.com/atharva-bhange/chatapp">
+        <button id="github-btn" type="button" class="btn btn-outline-dark">Github Repository</button>
+    </a>
+    <p id="banner">Created By: <a target="_blank" href="https://www.linkedin.com/in/atharva-bhange/">Atharva Bhange</a></p>
 
 
-                <form id="login-form" method="post" action="login.php">
-                    <div id="msg-box">
+    <div class="container outer-wrapper">
+        <div class="wrapper">
+
+            <form id="login-form" method="post" action="login.php">
+                
+                <div id="msg-box"> </div>
+
+                <div class="form-group">
+                    <label for="user_name">User Name</label>
+                    <input type="text" id="user_name" name="user_name" class="form-control" aria-describedby="emailHelp" placeholder="Your Unique Name"> </div>
+
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input id="password" type="password" name="password" class="form-control" id="password" placeholder="Don't tell anyone! :)"> </div>
+
+                <div class="row">
+
+                    <div class="col-6 text-center">
+                        <a href="register.html">
+                            <button type="button" class="btn btn-outline-success">Register</button>
+                        </a>
                     </div>
 
-                    <div class="form-group">
-                        <label for="user_name">User Name</label>
-                        <input type="text" id="user_name" name="user_name" class="form-control"  aria-describedby="emailHelp" placeholder="Your Unique Name">
+                    <div class="col-6 text-center">
+                        <button type="submit" class="btn btn-outline-info">Log In</button>
                     </div>
 
-                    <div class="form-group">
-                        <label for="password">Password</label>
-                        <input id="password" type="password" name="password" class="form-control" id="password" placeholder="Don't tell anyone! :)">
-                    </div>
-                    
-                    <div class="row">
-                        <div class="col-6 text-center">
-                            <a href="register.html"><button type="button" class="btn btn-outline-success">Register</button></a>
-                        </div>
-                        <div class="col-6 text-center">
-                            <button type="submit" class="btn btn-outline-info">Log In</button>
-                        </div>
-                    </div>
+                </div>
 
-                </form>
+            </form>
 
-
-            </div>
         </div>
+    </div>
 
 
-        <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
-        <script type="text/javascript" src="js/bootstrap.min.js"></script>
-        <script type="text/javascript" src="js/popper.min.js"></script>
-        <script type="text/javascript" src="js/jquery.validate.min.js"></script>
-        <script type="text/javascript" src="js/index_js.js"></script>
+    <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/popper.min.js"></script>
+    <script type="text/javascript" src="js/jquery.validate.min.js"></script>
+    <script type="text/javascript" src="js/index_js.js"></script>
+</body>
 
-    </body>
 </html>

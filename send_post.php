@@ -1,17 +1,24 @@
 <?php
 
-	session_start();
-	require_once "pdo.php";
+// THis script is used to send a post
 
-	$text = $_POST['text'];
-	$text = htmlentities($text);
+/**
+* Class and Function List:
+* Function list:
+* Classes list:
+*/
+session_start();
+require_once "pdo.php";
 
-	$stmt = $pdo->prepare("INSERT INTO post (user_id , post) VALUES ( :uid, :ps)");
-	$stmt->execute(array(
-		':uid' => $_SESSION['user_id'] ,
-		':ps' => $text
-	));
+$text = $_POST['text'];
+$text = htmlentities($text);
 
-	echo '1';
+$stmt = $pdo->prepare("INSERT INTO post (user_id , post) VALUES ( :uid, :ps)");
+$stmt->execute(array(
+				':uid' => $_SESSION['user_id'],
+				':ps' => $text
+));
+
+echo '1';
 
 ?>

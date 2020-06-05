@@ -1,24 +1,39 @@
 <?php
-    require_once "pdo.php";
 
-    $stmt = $pdo->prepare('SELECT username FROM user ');
-    $stmt->execute();
+//This script is used to determine if the username is in use on the register page.
 
-    $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
+/**
+* Class and Function List:
+* Function list: - 
+* Classes list: - 
+*/
 
-    $registered_username = array();
+require_once "pdo.php";
 
-    foreach ($rows as $row) {
-        array_push($registered_username, $row['username']);
-    }
+$stmt = $pdo->prepare('SELECT username FROM user ');
+$stmt->execute();
 
+$rows                = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
-    $requested_username  = $_REQUEST['username'];
+$registered_username = array();
 
-    if( in_array($requested_username, $registered_username) ){
-        echo 'false';
-    }
-    else{
-        echo 'true';
-    }
+// We make a list of registered usernames here.
+
+foreach ($rows as $row)
+{
+                array_push($registered_username, $row['username']);
+}
+
+$requested_username = $_REQUEST['username'];
+
+// We make comparisin and respond accordingly.
+
+if (in_array($requested_username, $registered_username))
+{
+                echo 'false';
+}
+else
+{
+                echo 'true';
+}
 ?>

@@ -1,25 +1,33 @@
 <?php
-	session_start();
-	require_once "pdo.php"; 
-	require_once "get_username.php"; 
 
-	$user_id = $_SESSION['user_id'];
+// This script loads all the friend request for the logged in user.
 
-	$stmt = $pdo->prepare('SELECT * FROM request WHERE reciever = :rs');
-	$stmt->execute(array(
-		':rs' => $user_id
-	));
+/**
+* Class and Function List:
+* Function list:
+* Classes list:
+*/
+session_start();
+require_once "pdo.php";
+require_once "get_username.php";
 
-	$rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
+$user_id = $_SESSION['user_id'];
 
-	$senders = array();
+$stmt    = $pdo->prepare('SELECT * FROM request WHERE reciever = :rs');
+$stmt->execute(array(
+				':rs'         => $user_id
+));
 
-	foreach ($rows as $row) {
-		array_push($senders, idtoname($row['sender'],$pdo));
-	}
+$rows    = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
-	$data = json_encode($senders);
-	echo $data;
+$senders = array();
 
+foreach ($rows as $row)
+{
+				array_push($senders, idtoname($row['sender'], $pdo));
+}
+
+$data = json_encode($senders);
+echo $data;
 
 ?>

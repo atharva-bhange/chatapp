@@ -1,37 +1,48 @@
-<?php
-	
-	require_once "pdo.php";
+<?
 
-	$salt = 'phpisawesome';
+// THis script is use to register new user
 
-	if (isset($_POST['username']) && isset($_POST['pass1']) && isset($_POST['pass2']) ){
+/**
+* Class and Function List:
+* Function list:
+* Classes list:
+*/
 
-		$name =  $_POST["username"];
-		$pass1 = $_POST["pass1"];
-		$pass2 = $_POST["pass2"];
+require_once "pdo.php";
 
+$salt   = 'phpisawesome';
 
-		if(strlen($name) > 0 && strlen($pass1) > 0 && strlen($pass2) && $pass1 == $pass2){
+if (isset($_POST['username']) && isset($_POST['pass1']) && isset($_POST['pass2']))
+{
 
-			$salted = $salt.$pass1;
+				$name   = htmlentities($_POST["username"]);
+				$pass1  = htmlentities($_POST["pass1"]);
+				$pass2  = htmlentities($_POST["pass2"]);
 
-			$hashed = hash('md5', $salted);
+				if (strlen($name) > 0 && strlen($pass1) > 0 && strlen($pass2) && $pass1 == $pass2)
+				{
+								// Salting and hashing
+								$salted = $salt . $pass1;
 
-			$stmt = $pdo->prepare('INSERT INTO user (username , password) VALUES ( :un, :ps)');
+								$hashed = hash('md5', $salted);
 
-			$stmt->execute(array(
-			':un' => $name,
-			':ps' => $hashed
-			));			
-			
-			header("Location: index.html");
-			return;
+								$stmt   = $pdo->prepare('INSERT INTO user (username , password) VALUES ( :un, :ps)');
 
-		}else{
-			header("Location: register.html");
-			return;
-		}
+								$stmt->execute(array(
+												':un' => $name,
+												':ps' => $hashed
+								));
 
-	}
+								header("Location: index.html");
+								return;
+
+				}
+				else
+				{
+								header("Location: register.html");
+								return;
+				}
+
+}
 
 ?>
