@@ -31,7 +31,7 @@ $(document).ready(function (){
 				$("#friend-box").html("");
 				for (var i = 0; i < names.length; i++) {
 					var name = names[i];
-					$("#friend-box").append('<p>'+name+'</p>');
+					$("#friend-box").append('<div class="row"><div class="col-lg-8 col-xl-8 col-md-8 col-sm-12 col-xs-12"><p>'+name+'</p></div><div class="col-lg-2 col-xl-2 col-md-2 col-sm-12 col-xs-12"><input id="'+name+'" class="btn btn-danger unfriend" type="button" value="--"></div></div>');
 				}
 			}
 			});
@@ -152,5 +152,25 @@ $(document).ready(function (){
 
 
 	});
+
+	$(document.body).on('click', '.unfriend' ,function(e){
+		var frnd_name = $(this).attr("id");
+
+		$.post(
+			'remove_friend.php',
+			{
+				frnd_name : frnd_name
+			},
+			function(){
+				load_friends();
+				load_not_friend();
+				load_requests();
+			}
+		);	
+
+
+	});
+
+
 
 });
