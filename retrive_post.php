@@ -45,13 +45,13 @@
 	function date_compare($a, $b){
     $t1 = strtotime($a['date']);
     $t2 = strtotime($b['date']);
-    return $t2 = $t1;
+    return $t2 - $t1;
 	}    
 
 	usort($all_posts, 'date_compare');
 
 	if (count($all_posts) > 20){
-		$all_posts = array_slice($all_posts, 0,21);
+		$all_posts = array_slice($all_posts, 0,20);
 	}
 	
 	$final_name = array();
