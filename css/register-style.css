@@ -13,7 +13,7 @@ html, body {
 
 .wrapper {
 	margin-top: 8%;
-	background-color: #edf4ff;
+	/*background-color: #edf4ff;*/
 	position: absolute;
 	display: inline-block;
 	border: solid 2px lightblue;

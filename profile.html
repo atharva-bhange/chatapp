@@ -1,21 +1,6 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<script type="text/javascript">
-		$.ajax({
-			url: 'check_user.php',
-			method: 'POST',
-			success: function(data){
-				if (data == '0'){
-					window.location.href = "index.html"
-				}else if(data == '1'){
-					console.log("got 1");
-				}else{
-					console.log(data);
-				}
-			}
-		})
-	</script>
 	<title>Home</title>
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="css/profile_style.css">
@@ -35,7 +20,7 @@
 		        <a class="nav-link" href="#">Home </a>
 		      </li>
 		      <li class="nav-item">
-		        <a class="nav-link" href="#">Friends</a>
+		        <a class="nav-link" href="friends.html">Friends</a>
 		      </li>
 		      <li class="nav-item">
 		        <a id="logout" class="nav-link" href="logout.php">Logout</a>
@@ -59,14 +44,16 @@
 			<div  class="col-lg-1 col-xl-1 col-md-1 col-sm-12"><br><br></div>
 
 			<div id="posts" class="col-lg-4 col-xl-4 col-md-4 col-sm-12 post">
+
 				
 				<form>
 					<div class="form-group">
-						<label for="post-box"><h5>Post a new update</h5></label>
+						<label for="post-box" ><h5>Post a new update</h5></label>
+						<div id="post-msg" style="color:green ; display: none;">Post sent successfuly</div>
 						<textarea rows="6" id="post-box"></textarea>
 						
 					</div>
-					<input  type="submit" class="btn btn-outline-success" name="">
+					<input  type="button" id="send-post" value="Send" class="btn btn-outline-success" name="">
 				</form>
 				
 			</div>

@@ -4,9 +4,9 @@
 
 	$salt = 'phpisawesome';
 
-	if (isset($_POST['user_name']) && isset($_POST['pass1']) && isset($_POST['pass2']) ){
+	if (isset($_POST['username']) && isset($_POST['pass1']) && isset($_POST['pass2']) ){
 
-		$name =  $_POST["user_name"];
+		$name =  $_POST["username"];
 		$pass1 = $_POST["pass1"];
 		$pass2 = $_POST["pass2"];
 

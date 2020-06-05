@@ -1,23 +1,28 @@
+html, body {
+    margin: 0;
+    height: 100%;
+}
+
+
+
+
 
 nav {
 	margin-bottom: 1rem;
 }
 
 .updates {
-	border: solid 2px lightblue;
 
+	max-height: 100%;
 	padding: 1rem;
-	border-top-left-radius:15px ;
-	border-bottom-right-radius:15px ;
+
 
 
 }
 
 .post {
-	border: solid 2px lightblue;
 	padding: 1rem;
-	border-top-left-radius:15px ;
-	border-bottom-right-radius:15px ;
+
 }
 
 .updates h4 {
@@ -36,4 +41,15 @@ nav {
 
 .post input {
 	float: right;
+}
+
+.individual-update {
+	padding: 1rem;
+	border-radius: 10px;
+	background-color: #f0ebeb;
+	margin-bottom: 10px;
+}
+
+.update-author {
+	border-bottom: solid 1px grey;
 }

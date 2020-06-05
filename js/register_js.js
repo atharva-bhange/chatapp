@@ -3,7 +3,12 @@ $(document).ready(function (){
 	$("#register-form").validate({
 
 		rules : {
-			user_name: {required: true},
+			username: {required: true,
+				remote: {
+                    url: "check_username.php",
+                    type: "post"
+                }
+			},
 			pass1: {required:true},
 			pass2: {
 				required:true,
@@ -14,7 +19,10 @@ $(document).ready(function (){
 		},
 
 		messages : {
-			user_name: "<small style='color:red'>Username is required</small>",
+			username: {
+				required:"<small style='color:red'>Username is required</small>",
+				remote: "<small style='color:red'>Username is in use.<small style='color:red'>"
+			},
 			pass1 : "<small style='color:red'>Paswords are required.</small>",
 			pass2 : "<small style='color:red'>Please enter the same password again.</small>"
 		},

@@ -9,7 +9,7 @@
 
 <!-- Navbar Start -->
 	<nav class="navbar navbar-expand-lg navbar-light bg-light" >
-	  <a class="navbar-brand" href="#">User Name</a>
+	  <a id="username-display" class="navbar-brand" href="#"></a>
 	  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
 	    <span class="navbar-toggler-icon"></span>
 	  </button>
@@ -17,13 +17,13 @@
 		  <div class="collapse navbar-collapse "  id="navbarNav">
 		    <ul class="navbar-nav ml-md-auto">
 		      <li class="nav-item ">
-		        <a class="nav-link" href="#">Home </a>
+		        <a class="nav-link" href="profile.html">Home </a>
 		      </li>
 		      <li class="nav-item">
 		        <a class="nav-link" href="#">Friends</a>
 		      </li>
 		      <li class="nav-item">
-		        <a class="nav-link" href="#">Logout</a>
+		        <a class="nav-link" href="logout.php">Logout</a>
 		      </li>
 		    </ul>
 		  </div>
@@ -36,42 +36,20 @@
 		<div class="row">
 			<div  id="request" class="col-lg-5 col-xl-5 col-md-5 col-sm-12 request parts">
 				<h5>Friend Request</h5>
-
-				<div class="req">
-					<div class="row">
-						<div class="col-lg-8 col-xl-8 col-md-8 col-sm-12 col-xs-12"><p>User 1</p></div>
-						<div class="col-lg-2 col-xl-2 col-md-2 col-sm-6 col-xs-6"><input class="btn btn-success" type="button" value="Yes" name=""></div>
-						<div class="col-lg-2 col-xl-2 col-md-2 col-sm-6 col-xs-6"><input class="btn btn-danger" type="button" value="No" name=""></div>
-					</div>
-				</div>
-
-				<div class="req">
-					<div class="row">
-						<div class="col-lg-8 col-xl-8 col-md-8 col-sm-12 col-xs-12"><p>User 2</p></div>
-						<div class="col-lg-2 col-xl-2 col-md-2 col-sm-6 col-xs-6"><input class="btn btn-success" type="button" value="Yes" name=""></div>
-						<div class="col-lg-2 col-xl-2 col-md-2 col-sm-6 col-xs-6"><input class="btn btn-danger" type="button" value="No" name=""></div>
-					</div>
+				<div id="req-box">
 				</div>
 
 			</div>
 
 			<div  id="friend" class="col-lg-3 col-xl-3 col-md-3 col-sm-12 friend parts">
 				<h5>Friends</h5>
-				<p>User 1</p>
-				<p>User 2</p>
+				<div id="friend-box">
+				</div>
 			</div>
 
 			<div  id="all-users" class="col-lg-4 col-xl-4 col-md-4 col-sm-12 all-users parts">
 				<h5>All Users</h5>
-					<div class="usr">
-						<div class="row">
-							<div class="col-lg-9 col-xl-9 col-md-9 col-sm-12 col-xs-12"><p>User 1</p></div>
-							<div class="col-lg-3 col-xl-3 col-md-3 col-sm-12 col-xs-12"><input class="btn btn-success" type="button" value="+" name=""></div>
-						</div>
-						<div class="row">
-							<div class="col-lg-9 col-xl-9 col-md-9 col-sm-12 col-xs-12"><p>User 2</p></div>
-							<div class="col-lg-3 col-xl-3 col-md-3 col-sm-12 col-xs-12"><input class="btn btn-success" type="button" value="+" name=""></div>
-						</div>
+					<div id="usr" class="usr">
 					</div>				
 
 			</div>
@@ -84,6 +62,7 @@
 	<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
 	<script type="text/javascript" src="js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="js/popper.min.js"></script>
+	<script type="text/javascript" src="js/friends_js.js"></script>
 	
 </body>
 </html>

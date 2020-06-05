@@ -1,6 +1,7 @@
 html, body {
     margin: 0;
     height: 100%;
+    position: relative;
 }
 
 .outer-wrapper {
@@ -13,7 +14,7 @@ html, body {
 
 .wrapper {
 	margin-top: 10%;
-	background-color: #edf4ff;
+	/*background-color: #edf4ff;*/
 	position: absolute;
 	display: inline-block;
 	border: solid 2px lightblue;
@@ -24,4 +25,16 @@ html, body {
 	
 	border-top-left-radius:15px ;
 	border-bottom-right-radius:15px ;
+}
+
+#github-btn {
+	position: absolute;
+	margin-top: 1rem;
+	margin-left: 1rem;
+}
+
+#banner {
+	position: absolute;
+	top: 95%;
+	left: 84%;
 }
